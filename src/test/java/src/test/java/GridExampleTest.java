@@ -5,10 +5,13 @@ import java.net.URL;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-public class GridExample {
+public class GridExampleTest {
+	
+	private WebDriver driver;
 	
 	@Test
 	public void testTime() throws MalformedURLException {
@@ -23,10 +26,8 @@ public class GridExample {
 		
 		driver.findElement(By.xpath("//input[@id='Email']")) .sendKeys("username");
 		
-		driver.findElement(By.xpath("//input[@id='Passwd']")) .sendKeys("password");
-		
-		driver.close();
+		driver.quit();
 
 	}
-
+	
 }
